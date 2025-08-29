@@ -1,0 +1,52 @@
+
+/* essa linha @import url, importa uma fonte personalizada, 
+caso queira usa-la em algum lugar como em um paragrafo e etc*/
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap'); 
+
+
+* { /* Esse "*" seleciona todos os elementos da pagina, logo, os estilos determinados entre {} serão aplicados a todos os elementos da pagina */
+    margin: 0; /* remove a margem e o espaço de <body>, <p>, <h1> e etc */
+    padding: 0; /*  remove o espaçamento de <ul>, <ol> e etc */
+}
+
+
+body { /* Seleciona o body da pagina */
+    background-color: white; /* deixa o fundo branco */
+    font-family: Arial, Helvetica, sans-serif; /* deixa o estilo da fonte em arial, caso o dispositivo não tenha suporte para arial, vai tentar heveltica e caso de novo não tenha, vai tentar sans-serif */
+}
+
+header{ /* Seleciona o header */
+    background-color: aquamarine;  /* deixa o fundo na cor aquamarine */
+}
+main { /* seleciona o main */
+    font-size: 26px; /* deixa o tamanho da fonte em 26px*/
+}
+p { /* seleciona os paragrafos */
+    font-size: 1em; /* tamanho relativo */
+    font-weight: bolder; /* deixa em negrito */
+    line-height: 2; /* deixa o espaçamento 2x maior */
+    letter-spacing: 2px; /* espaço extra entre letras (2 pixels) */
+    text-indent: 5px; /* Recuo inicial (5 pixels */
+    color: rgb(105, 11, 134); /* deixa a cor em RGB personalizado */
+    
+}
+div {
+    font-size: 16px; /* deixa o tamanho do texto em div em 16 pixels */
+}
+main > section > div > p { /* seleciona especificamente o paragrafo */
+    color: red; /* Sobrescreve a cor de "roxo" para vermelho */
+    font-size: 1.5em; /* 1.5 × 16px (da div) = 24px */
+}
+
+h1,h2 {
+    text-align: center; /* centraliza h1 e h2 */
+}
+a {
+    text-decoration: none; /* remove sublinhado padrão */
+    color: black;   /* deixa a cor preta */
+    font-style: italic; /* deixa em italico */
+    font-family: "Pinyon Script", cursive; /* pega aquela fonte importada e usa aqui */
+    font-weight: 400; /* não deixa em negrito */
+    font-style: normal; /* deixa a fonte normal, se quiser italico só apagar essa linha */
+}
+

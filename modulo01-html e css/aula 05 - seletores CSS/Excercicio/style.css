@@ -1,0 +1,36 @@
+main {
+    width: 50vw;
+    margin: auto;
+}
+
+h1 {
+
+}
+#titulo1 {
+    color: blueviolet;
+    background-color: rgb(202, 127, 29);
+    text-align: center;
+}
+.texto-titulo1 {
+    color:aqua;
+    background-color: blanchedalmond;
+}
+#titulo2 {
+    color: green;
+    background-color: black;
+    text-align: center;
+}
+.texto-titulo2 {
+    color: blueviolet;
+    background-color: orange;
+}
+#titulo3 {
+    color: orange;
+    background-color: red;
+    text-align: center;
+}
+
+.texto-titulo3 {
+    color: salmon;
+    background-color: pink;
+}

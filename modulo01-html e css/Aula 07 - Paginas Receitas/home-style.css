@@ -1,0 +1,67 @@
+@import url(cores.css);
+:root{
+    --cor-cabecalho-incial: #e76;
+    --cor-cabecalho-final: #c15d00;
+    --cor-fudndo-body: white;
+    --cor-main: #fff;
+    --cor-letras-link: #fff;
+    --cor-rodade: #333;
+    --cor-butao-cabecalho: #ffffff6a;
+    --cor-main: rgb(92, 92, 92);
+}
+
+
+
+body{
+    background-color: var(--cor-fudndo-body);
+    text-align: center;
+}
+
+main{
+    margin-top: 20px;
+}
+
+.card-receita{
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px black;
+    display: inline-block;
+    margin: 20px;
+    background-color: var(--cor-main);
+
+}
+
+.card-receita:hover{
+    transform: translate(2px, -2px)
+}
+
+.card-receita > img {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+.card-receita > h3 {
+    margin: 15px 0px;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.btn-receita {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: var(--cor-letras-link);
+    background-color: var(--cor-cabecalho-inicial);
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.btb-receita:hover{
+    transform: translate(2px -2px);
+    background-color: var(--cor-cabecalho-final);
+}

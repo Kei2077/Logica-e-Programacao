@@ -1,0 +1,23 @@
+#container {
+    width: 60vw;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+}
+
+.item{
+    display: inline;
+    flex-basis: 200px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 20px;
+}

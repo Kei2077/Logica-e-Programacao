@@ -7,3 +7,6 @@ let listaprodutos = [
 listaprodutos.forEach((produto) => {
     console.log(`O ${produto.nome} da ${produto.fabricante} e r$ ${produto.valor}`);
 })
+
+let listaprodutoscaros = listaprodutos.filter(produto => produto.valor > 1000)
+console.log(listaprodutoscaros)

@@ -46,3 +46,19 @@ function preencheCampos(cepJson){
 
 
 }
+
+function ApagarCampos(cepJson){
+
+    let rua = document.getElementById("rua")
+    let cidade = document.getElementById("cidade")
+    let estado = document.getElementById("estado")
+    let bairro = document.getElementById("bairro")
+    rua.value = ""
+    bairro.value = ""
+    cidade.value = ""
+    estado.value = ""
+
+
+
+
+}

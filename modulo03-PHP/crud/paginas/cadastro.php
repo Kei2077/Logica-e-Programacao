@@ -42,25 +42,37 @@
         </form>
     </main>
     <?php
-        if($_SERVER["REQUESt_METHOD"] == "POST"){
-            include("../conexao/conexao.php");
-            $nome = $_POST["nome"];
-            $sobrenome = $_POST["sobrenome"];
-            $email = $_POST["email"];
-            $curso = $_POST["curso"];
-            $hoje = new DateTime();
-            echo $hoje->format("Ym") . rand(100,999);
+        try{
+            if($_SERVER["REQUESt_METHOD"] == "POST"){
+                include("../conexao/conexao.php");
+                $nome = $_POST["nome"];
+                $sobrenome = $_POST["sobrenome"];
+                $email = $_POST["email"];
+                $curso = $_POST["curso"];
+                $hoje = new DateTime();
+                echo $hoje->format("Ym") . rand(100,999);
 
-            echo $id;
+                echo $id;
 
-            $sql = "INSERT INTO usuarios (id, nome, sobrenone, email, cursos) values (?,?,?,?,?)";
-            $stmt = $conn->prepare($sql);
+                $sql = "INSERT INTO usuarios (id, nome, sobrenone, email, cursos) values (?,?,?,?,?)";
+                $stmt = $conn->prepare($sql);
 
-            $stmt->bind_param("issss,$id,$nome,$sobrenome,$emsil,$curso");
-            echo "<div class='mensagem sucesso'>usuario cadastrado </div>";
-            $stmt->close();
-            $conn->close();
+                $stmt->bind_param("issss,$id,$nome,$sobrenome,$emsil,$curso");
+                echo "<div class='mensagem sucesso'>usuario cadastrado </div>";
+                $stmt->close();
+                $conn->close();
+            }
         }
+
+        catch(mysqli_sql_exceptiom $e){
+            if (str_contains($e->getMessage(), "Duplicate entry")){
+                echo "<div class'mensagem erro'>E-mail ja esta cadastrado </div>";
+            } else {
+                echo "<div class='mensagem erro'> Erro ao cadastrar, tente novamente </div>";
+            }
+            
+        }
+
     ?>
 </body>
 </html>

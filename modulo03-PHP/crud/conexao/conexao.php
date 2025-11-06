@@ -4,7 +4,7 @@
     $password = "";
     $dbname = "faculdade";
 
-    $conn = new msqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error){
         die("Falhou");
